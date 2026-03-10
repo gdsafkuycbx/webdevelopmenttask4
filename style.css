@@ -1,0 +1,56 @@
+  /* Apply box-sizing globally to ensure padding/borders don't affect width */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Ensuring background covers full viewport */
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.content-section {
+    /* 
+       Requirement: 25% spacing from left/right, 10% from top/bottom.
+       Calculation: 
+       Width = 100vw - 25vw (left) - 25vw (right) = 50vw
+       Height = 100vh - 10vh (top) - 10vh (bottom) = 80vh
+    */
+    width: 50vw;
+    height: 80vh;
+    margin: 10vh 25vw;
+    
+    /* Styling elements without Flex or Position */
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+.display-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.interaction-btn {
+    /* Gradient background and font settings */
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.interaction-btn:hover {
+    opacity: 0.9;
+}
+   
